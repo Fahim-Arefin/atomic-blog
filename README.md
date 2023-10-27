@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Atomic Blog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Atomic Blog is a very simple web-based blogging platform that empowers users to create, search, and view blog posts in a user-friendly interface. It offers features for post creation, search functionality, and a dark mode for customization.This project is focused in demonstrate optimization technique in React.This project initially was very slow then applided memoization (optimization technics) and makes it smooth reactive.In this app Components are memoized by memo function when needed . Also useMemo and useCallback hook is used to memoize appropiate position for prevent wasted re-render.
 
-## Available Scripts
+## Live Application
 
-In the project directory, you can run:
+To explore the live version of Atomic Blog and start creating and browsing blog posts, please visit [Atomic Blog Web App](https://atomic-blog-web.netlify.app/).
 
-### `npm start`
+## Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Add optimization techniques (memoization)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Lazy Loading of bundle.js:
 
-### `npm test`
+- Lazy loading is a technique used to load assets, like JavaScript files, only when they are needed. In this case, the bundle.js file is loaded lazily, which enhances app performance by reducing initial loading times. It ensures that the app starts quickly and doesn't waste resources on loading scripts that might not be immediately necessary.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## React Memoization:
 
-### `npm run build`
+- React memoization is a mechanism to optimize functional components. It memoizes (caches) the result of the component's rendering so that it doesn't re-render unnecessarily. The Archive component is wrapped with the memo higher-order component, which means it will only re-render if its props have changed. This optimization prevents re-renders when props remain the same, enhancing performance.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## useMemo and useCallback:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+useMemo and useCallback are hooks that help in optimizing the performance of the application by memoizing values and functions. In the code, useMemo is used to memoize the archiveOption value. This means that the archiveOption is recalculated only when the posts.length changes, preventing unnecessary recalculations.
+useCallback is used for the handleAddPost function, ensuring that the function remains the same across re-renders unless its dependencies change. This optimization is particularly useful when passing functions as props to child components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Efficient Rendering:
 
-### `npm run eject`
+The application is designed to render efficiently. It avoids unnecessary re-renders through the use of memoization and proper handling of state and props. This results in a smoother user experience and better performance.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Create Posts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Users can easily create new blog posts by providing a title and body.
+- The "Add post" feature allows for quick post creation.
+- Created posts are added to the list of existing blog posts.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Search Posts
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Users can search for specific posts by entering search queries.
+- The application provides a search bar for filtering posts based on keywords.
+- Search results are displayed in real-time for user convenience.
 
-## Learn More
+### 4.Dark Mode
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Enjoy a customizable user experience with a fake dark mode toggle.
+- Toggle between light and dark modes with a single click.
+- The application's appearance changes to match the selected mode.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 5. Archive Posts
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- View and manage archived posts in the "Post archive" section.
+- Easily show or hide archived posts with the "Show archive posts" button.
+- Add archived posts as new posts for a seamless user experience.
