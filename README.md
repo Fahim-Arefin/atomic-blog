@@ -4,7 +4,7 @@
 
 ## Live Application
 
-Explore the live version of Atomic Blog and start creating and browsing blog posts by visiting the [Atomic Blog Web App](https://atomic-blog-web.netlify.app/).
+Explore live version of Atomic Blog by visiting the [Atomic Blog Web App](https://atomic-blog-web.netlify.app/).
 
 ## Key Features
 
