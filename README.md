@@ -1,6 +1,6 @@
 # Atomic Blog
 
-**Atomic Blog** is a very simple web-based blogging platform that empowers users to create, search, and view blog posts in a user-friendly interface. It offers features for post creation, search functionality, and a dark mode for customization.This project is focused in demonstrate optimization technique in React.This project initially was very slow then applided memoization (optimization technics) and makes it smooth reactive.In this app Components are memoized by memo function when needed . Also useMemo and useCallback hook is used to memoize appropiate position for prevent wasted re-render.
+**Atomic Blog** is a straightforward web-based blogging platform designed to give users the power to create, search for, and read blog posts within a user-friendly environment. It provides tools for creating posts, a search feature, and the option to switch to a dark mode for customization. This project's primary aim is to showcase React optimization techniques. Initially, this project suffered from sluggish performance, but through the application of memoization (optimization methods), it has been transformed into a smooth and responsive experience. In this app, components are selectively cached using the "memo" function. Moreover, the "useMemo" and "useCallback" hooks are employed to cache specific elements and functions, reducing unnecessary re-renders.
 
 ## Live Application
 
